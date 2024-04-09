@@ -1,0 +1,43 @@
+<nav>
+	<ul class='nav-bar'>
+		<li class='logo'>
+			<a href='{{ path('app_main') }}'><img src={{ asset('/images/herbau.png') }}/></a>
+		</li>
+		<input type='checkbox' id='check'/>
+		<span class="menu">
+			<li>
+				<a href="{{ path('app_main') }}">Home</a>
+			</li>
+			<li>
+				<a href="#">Products</a>
+			</li>
+			<li>
+				<a href="#">Qui sommes-nous ?</a>
+			</li>
+			{% if not app.user %}
+				<li>
+					<a href="{{ path('app_register') }}">inscription</a>
+				</li>
+				<li>
+					<a href="{{ path('app_login') }}">connexion</a>
+				</li>
+			{% endif %}
+			{% if app.user %}
+				<li>
+					<a href="#">
+						{{ app.user.lastname }}</a>
+				</li>
+				<li>
+					<a href="{{ path('app_logout') }}">Logout</a>
+				</li>
+
+			{% endif %}
+			<label for="check" class="close-menu">
+				<i class="fas fa-times"></i>
+			</label>
+		</span>
+		<label for="check" class="open-menu">
+			<i class="fas fa-bars"></i>
+		</label>
+	</ul>
+</nav>
