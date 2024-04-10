@@ -9,13 +9,14 @@
 
 
 :root {
-    --color-primary: #2A3A4F;
-    --color-secondary: #335179;
+    --color-primary: #1f3249;
+    --color-secondary: #1c4074;
     --color-card: #5a79a1;
-    --color-text: #fffdfd;
+    --color-text: #fffafa;
 }
 
 body {
+    background-color: #F5F5F5;
     min-height: 100vh;
     height: 1px;
 }
@@ -108,7 +109,7 @@ body {
         align-items: center;
         justify-content: center;
         width: 40vh;
-        height: 50vh;
+        height: 60vh;
         position: fixed;
         top: 0;
         right: -100%;
@@ -118,7 +119,7 @@ body {
     }
 
     .menu li {
-        margin-top: 40px;
+        margin-top: 10px;
     }
 
     .menu li a {
@@ -140,3 +141,51 @@ body {
 
 
 /* nav bar*/
+
+/* home page */
+
+#home-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20em auto;
+    border: 1px solid;
+    padding: 10px;
+}
+
+#categories-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-top: 100px;
+    color: var(--color-text);
+}
+
+#categories-card-container h2 {
+    text-align: center;
+    margin-bottom: 0.2em;
+}
+
+
+#categories-card {
+    width: 400px;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px;
+}
+
+#categories-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#categories-card-content p {
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+}

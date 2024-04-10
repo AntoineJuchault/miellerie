@@ -1,7 +1,47 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Miellerie du chateau{% endblock %}
+{% block title %}Miellerie du chateau
+{% endblock %}
 
 {% block body %}
-
+	<div id="home-header">
+		<div id="home-head">
+			<h1>Bienvenue à la <br> miellerie du chateau</h1>
+		</div>
+		<div id="section-pres">
+			Nous proposons une large gamme de miel français,
+			<br>
+			produits par nos soins.
+			<br>
+			Miel crémeux, liquides, forts, doux,
+			<br>
+			vous trouverez forcément un miel à votre goût.
+			<br>
+		</div>
+	</div>
+	<div id="categories-card-container">
+		{% for category in categories %}
+			{% if category.parent is null %}
+				<div id="categories-card">
+					<div id="categories-card-content">
+						<img src="{{ asset('/images/miel.jpg') }}"/>
+                        <h2>{{ category.name }}</h2> <!-- arrete de changer de place mon putain de h2 connasse d'ia-->
+						<p>Lorem ipsum dolor sit amet consectetur,
+							<br>
+							adipisicing elit. Porro aliquam,
+							<br>
+							molestiae eius sed architecto labore aspernatur debitis ipsum.
+							<br>
+							Quis magnam praesentium quae exercitationem accusantium optio
+							<br>
+							corporis repellat consequatur doloremque numquam?
+						</p>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
+	<style>
+		
+	</style>
 {% endblock %}

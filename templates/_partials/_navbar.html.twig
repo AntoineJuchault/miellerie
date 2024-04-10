@@ -9,7 +9,7 @@
 				<a href="{{ path('app_main') }}">Home</a>
 			</li>
 			<li>
-				<a href="#">Products</a>
+				<a href="{{ path('app_products_app_index') }}"> products</a>
 			</li>
 			<li>
 				<a href="#">Qui sommes-nous ?</a>
@@ -21,6 +21,7 @@
 				<li>
 					<a href="{{ path('app_login') }}">connexion</a>
 				</li>
+
 			{% endif %}
 			{% if app.user %}
 				<li>
