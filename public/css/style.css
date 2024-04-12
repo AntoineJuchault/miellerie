@@ -108,8 +108,8 @@ body {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 40vh;
-        height: 60vh;
+        width: 48vh;
+        height: 80vh;
         position: fixed;
         top: 0;
         right: -100%;
@@ -148,11 +148,32 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 80%;
-    margin: 20em auto;
-    border: 1px solid;
+    max-width: 60%;
     padding: 10px;
+    margin: 10em auto;
+    background-color: var(--color-primary);
+    color: var(--color-text);
 }
+
+
+
+@media(min-width: 1200px) {
+    #home-header {
+        max-width: auto;
+        padding: 10px;
+    }
+}
+
+#home-header h1 {
+    padding: 10px;
+
+}
+
+#section-pres p {
+    padding: 10px;
+    font-size: 25px;
+}
+
 
 #categories-card-container {
     display: flex;
@@ -188,4 +209,86 @@ body {
     padding: 10px;
     font-size: 20px;
     line-height: 1.5;
+}
+
+#categories-card-content button {
+    padding: 10px;
+    width: 50%;
+    border: none;
+    background-color: var(--color-primary);
+}
+
+
+#categories-card-content a {
+    list-style: none;
+    text-decoration: none;
+    color: var(--color-text);
+    text-align: center;
+    margin: auto;
+}
+
+/* Register form */
+
+#register-form-container {
+    height: 120vh;
+    justify-content: center;
+    align-items: center;
+    width: 70vh;
+    margin: 10em auto;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+#register-form-container h2 {
+    text-align: center;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#section-information,
+#section-address {
+    margin-right: 20px;
+    padding: 2em;
+    width: 100%;
+}
+
+#section-information label,
+#section-address label {
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 10px;
+}
+
+
+#section-information input,
+#section-address input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 0.5em;
+    border: none;
+}
+
+#registration-validate {
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#registration-validate button {
+    padding: 10px 10px 10px;
+    width: 80%;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    color: var(--color-text);
+    background: var(--color-secondary);
+    cursor: pointer;
+}
+
+#registration-validate button:hover {
+    background-color: var(--color-card);
 }
