@@ -292,3 +292,42 @@ body {
 #registration-validate button:hover {
     background-color: var(--color-card);
 }
+
+
+
+#login-container {
+    height: 120vh;
+    justify-content: center;
+    align-items: center;
+    width: 70vh;
+    margin: 10em auto;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
+
+#login-form {
+    padding: 10px;
+    max-width: 90%;
+    margin: auto ;
+    box-sizing: border-box; /* assure que la largeur inclut le padding */
+
+}
+#login-container #login-form h2{
+    text-align: center;
+    padding: 10px;
+    
+}
+
+
+#login-container label {
+    display: block;
+    margin-bottom: 1em;
+    margin-top: 10px;
+}
+#login-form input[type="email"],
+#login-form input[type="password"] {
+    width: 100%;
+    box-sizing: border-box; /* assure que la largeur inclut le padding */
+    padding: 10px; /* ajustez le padding selon vos préférences */
+    margin-bottom: 10px; /* ajoute un peu d'espace entre les champs */
+}
