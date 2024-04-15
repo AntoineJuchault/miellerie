@@ -1,13 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Details de {{ product.name }} {% endblock %}
+{% block title %}Détails de {{ product.name }}{% endblock %}
 
 {% block body %}
 
 <div id="product-details-container">
-    <h2>
-        Details de {{ product.name }} 
-    </h2>
-    
+    <h2>{{ product.name }}</h2>
+    <div id="product-details-content">
+        <div id="product-detail-img">
+        </div>
+        <p>{{ product.description }}</p>
+        <p>Catégories : {{ product.categories.name }}</p>
+        <p>Prix : {{ product.price }} €</p>
+        {% if product.stock > 0 %}
+            <button><a href="#">Ajouter au panier</a></button>
+        {% else %}
+            <p class="danger">Temporairement en rupture de stock</p>
+        {% endif %}
+    </div>
 </div>
+
 {% endblock %}
