@@ -1,1 +1,10 @@
-{{ form (productform)}}
+{{ form_start(productForm) }}
+    {{ form_row(productForm.name) }}
+    {{ form_row(productForm.description) }}
+    {{ form_row(productForm.weight) }}
+    {{ form_row(productForm.price) }}
+    {{ form_row(productForm.stock) }}
+    {{ form_row(productForm.categories) }}
+
+    <button type="submit">ajouter un produit</button>
+{{ form_end(productForm) }}

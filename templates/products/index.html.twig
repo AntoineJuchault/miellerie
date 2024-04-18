@@ -1,16 +1,23 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProductsController!
+{% block title %}Nos produits
 {% endblock %}
 
 {% block body %}
-
-	<div id="product-container">
-		<h2>
-			Liste des produits
-		</h2>
-		<div id="products-card-container">
-			{{ dump() }}
-		</div>
-	</div>
-{% endblock %}
+<h2 id ="product"> Nos produits</h2>
+<div id="products-card-container">
+		{% for product in products %}
+			
+				<div id="product-card">
+					<div id="products-card-content">
+					<img src="{{ asset('/images/miel.jpg') }}"/>
+						<h2>{{ product.name }}</h2>
+						<p>{{ product.description }}</p>
+						<p>{{ product.price }} € </p>
+						<button>
+							<a href='#'>Détails du produits</a>
+						</button>
+					</div>
+				</div>
+		{% endfor %}
+	</div>{% endblock %}
