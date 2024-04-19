@@ -65,20 +65,20 @@ class ProductsController extends AbstractController
     {
 
         // on verifie si l'utilisateur peu editer
-        
-        
+
+
         $this->denyAccessUnlessGranted('PRODUCT_EDIT', $product);
 
         // Création du formulaire 
 
         $productForm = $this->createForm(ProductsFormType::class, $product);
-    
+
         // traitement de la requête d'édition, 
 
         $productForm->handleRequest($request);
 
 
-            if ($productForm->isSubmitted() && $productForm->isValid()) {
+        if ($productForm->isSubmitted() && $productForm->isValid()) {
 
             // generation du slug
 
@@ -98,7 +98,7 @@ class ProductsController extends AbstractController
 
             // return $this->redirectToRoute('');
         }
-        
+
         return $this->render('admin/products/edit.html.twig');
     }
     #[Route('/delete/{id}', name: 'app_admin_delete')]
