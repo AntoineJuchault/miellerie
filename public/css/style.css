@@ -153,7 +153,6 @@ body {
     margin: 4em auto;
     background-color: var(--color-primary);
     color: var(--color-text);
-    text-align: center;
 }
 
 
@@ -165,6 +164,7 @@ body {
         max-width: auto;
         padding: 10px;
     }
+
 }
 
 #home-header h1 {
